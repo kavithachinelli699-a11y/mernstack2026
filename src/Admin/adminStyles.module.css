@@ -1,0 +1,97 @@
+
+.bread{
+    background-color:  rgb(91, 10, 10);
+}
+
+.bread h1{
+    font-size: 25px;
+    color:rgb(255, 255, 255); 
+    padding: 20px 0px;
+    text-align: center;
+    text-transform: uppercase;  
+}
+
+
+.bx_shadow h2{
+    color: #000;
+}
+ 
+a{
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+.vertical_line{
+    width: 2px;
+    height: 500px;
+    background-color: #dcdcdc;
+}
+
+
+
+.adminsidebar{
+    list-style: none;
+}
+
+.adminsidebar li{
+     margin-bottom: 20px;
+}
+
+.adminsidebar li a{
+    color:black;
+    font-weight: 500px;
+    
+}
+
+.tablePage {
+    padding: 24px;
+    background: #f7f7f7;
+    min-height: 100vh;
+}
+
+.tablePage h2 {
+    font-family:fantasy;
+    margin-bottom: 16px;
+    color: #222;
+}
+
+.tableWrapper {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 12px;
+}
+
+.table {
+    width: auto;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left !important;
+}
+
+.table th {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.actionBtn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.deleteBtn {
+    color: #fff;
+}
+
+
+
+

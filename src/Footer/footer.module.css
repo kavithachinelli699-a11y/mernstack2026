@@ -1,0 +1,96 @@
+
+.footerGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding-bottom: 40px;
+}
+
+.footerBox h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #38bdf8;
+}
+
+.footerBox p {
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.footerBox ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footerBox ul li {
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footerBox ul li:hover {
+    color: #38bdf8;
+    padding-left: 5px;
+}
+
+/* Offers Scroll */
+
+.offerContainer {
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+}
+
+.offerScroll {
+    display: flex;
+    flex-direction: column;
+    animation: scrollOffers 10s linear infinite;
+  
+}
+
+.offerScroll p {
+    margin-bottom: 20px;
+    background-color: #556071;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+@keyframes scrollOffers {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+/* Bottom Footer */
+
+.bottomFooter {
+    border-top: 1px solid #334155;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #556071;
+    color: white;
+    width: 100%;
+}
+
+.bottomFooter p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+
+
+@media screen and (max-width: 576px) {
+    .footerGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        text-align: center;
+    }
+}

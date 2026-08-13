@@ -1,0 +1,654 @@
+.contactSection {
+  padding: 60px 0;
+  background-color: #f8fafc;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* Form */
+
+.contactForm {
+  background-color: white;
+  padding: 35px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contactForm h2 {
+  margin-bottom: 25px;
+  color: #0f172a;
+}
+
+.contactForm form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactForm input,
+.contactForm textarea {
+  margin-bottom: 20px;
+  padding: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  outline: none;
+  font-size: 15px;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  border-color: #0ea5e9;
+}
+
+.contactForm button {
+  padding: 14px;
+  border: none;
+  background-color: #0ea5e9;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contactForm button:hover {
+  background-color: #0284c7;
+}
+
+/* Address */
+
+.contactInfo {
+  background-color: white;
+  padding: 35px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contactInfo h2 {
+  margin-bottom: 25px;
+  color: #0f172a;
+}
+
+.addressBox p {
+  margin-bottom: 18px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.mapBox {
+  margin-top: 25px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------------------------*Gallery*------------------------ */
+
+.bread{
+    background-color:  rgb(91, 10, 10);
+}
+
+.bread h1 {
+    font-size: 30px;
+    color:white;
+    padding:  0px;
+    text-align: center;
+}
+
+.bread h4 {
+    color:white;
+    padding:  0px;
+    text-align: center;
+}
+
+.bx_shadow{
+    box-shadow: 0px 0px 10px 0px;
+    padding: 20px;
+
+
+
+  }
+
+  .galleryImage:hover {
+    transform: scale(1.2);
+}
+
+/* ----------------------OFFERS------------------------------------ */
+
+.offerSection {
+  padding: 70px 0;
+  position: relative;
+}
+
+/* Center Line */
+
+.centerLine {
+  position: absolute;
+  width: 4px;
+  background-color: #0ea5e9;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+}
+
+/* Card */
+
+.offerCard {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.offerCard:hover {
+  transform: translateY(-8px);
+}
+
+/* Image */
+
+.offerCard img {
+  height: 160px;
+  object-fit: cover;
+}
+
+/* Content */
+
+.offerCard h4 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.offerCard ul {
+  padding-left: 18px;
+}
+
+.offerCard ul li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 768px) {
+
+  .centerLine {
+    display: none;
+  }
+
+}
+
+/* --------------------------BOOK-APPOINTMENTS-------------------------------- */
+.appointmentSection {
+  padding: 70px 0;
+  background-color: #f8fafc;
+}
+
+.formBox {
+  background-color: white;
+  padding: 45px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.08);
+}
+
+.formBox h2 {
+  text-align: center;
+  margin-bottom: 35px;
+  color: #0f172a;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.formBox label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.formBox input,
+.formBox select,
+.formBox textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.formBox input:focus,
+.formBox select:focus,
+.formBox textarea:focus {
+  border-color: #0ea5e9;
+}
+
+.formBox textarea {
+  resize: none;
+}
+
+.formBox button {
+  background-color: #0ea5e9;
+  color: white;
+  border: none;
+  padding: 14px 40px;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.formBox button:hover {
+  background-color: #0284c7;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 768px) {
+
+  .formBox {
+    padding: 25px;
+  }
+
+  .formBox h2 {
+    font-size: 28px;
+  }
+
+}
+
+/* ----------------------------------HOME----------------------------------- */
+
+
+.banner{
+  width:100%;
+  height:500px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+
+  color:white;
+  text-align:center;
+
+  background-size:cover;
+  background-position:center;
+
+  padding:30px;
+}
+
+/* Heading */
+
+.banner h1{
+  font-size:60px;
+  font-weight:900;
+}
+
+/* Paragraph */
+
+.banner p{
+  font-size:18px;
+  letter-spacing:3px;
+  margin:20px 0;
+}
+
+/* Button */
+
+.banner button{
+  width:200px;
+  height:50px;
+
+  background-color:transparent;
+  color:white;
+
+  border:1px solid white;
+  border-radius:30px;
+
+  transition:0.5s;
+}
+
+.banner button:hover{
+  background-color:white;
+  color:black;
+}
+
+/* Background Images */
+
+.banner0{
+  background-image:
+  linear-gradient(
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+  ),
+  url('../assets/banner0.jpg');
+}
+
+.banner1{
+  background-image:
+  linear-gradient(
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+  ),
+  url('../assets/banner1.jpg');
+}
+
+.banner2{
+  background-image:
+  linear-gradient(
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+  ),
+  url('../assets/banner2.jpg');
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+  .banner{
+    height:300px;
+    padding:20px;
+  }
+
+  .banner h1{
+    font-size:28px;
+  }
+
+  .banner p{
+    font-size:14px;
+    letter-spacing:1px;
+  }
+
+  .banner button{
+    width:150px;
+    height:45px;
+  }
+
+}
+
+/* ----------------------ABOUT-------------------- */
+
+/* ABOUT SECTION */
+
+.aboutImages{
+    position:relative;
+    width:100%;
+    height:400px;
+}
+
+.smallImg{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:20px;
+
+    position:absolute;
+    top: 10px;
+    left:0px;
+
+    opacity:0.4;
+}
+
+/* Main Image */
+
+.mainImg{
+    width:280px;
+    height:280px;
+    object-fit:cover;
+    border-radius:20px;
+
+    position:absolute;
+    top:120px;
+    left:150px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Vertical Line */
+
+.verticalLine{
+    width:2px;
+    height:350px;
+    background:#dcdcdc;
+}
+
+/* Right Content */
+
+.aboutContent h5{
+    color:#0d6efd;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.aboutContent h2{
+    font-size:42px;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.aboutContent p{
+    color:#666;
+    line-height:30px;
+    margin-bottom:20px;
+}
+
+/* Mobile Responsive */
+
+@media(max-width:768px){
+
+    .aboutImages{
+        height:350px;
+        margin-bottom:40px;
+    }
+
+    .mainImg{
+        width:220px;
+        height:220px;
+        left:100px;
+    }
+
+    .smallImg{
+        width:180px;
+        height:180px;
+    }
+
+    .verticalLine{
+        display:none;
+    }
+
+    .aboutContent h2{
+        font-size:30px;
+    }
+
+}
+
+/* -----------------------------ACHIEVEMENTS----------------------------------- */
+
+/* ACHIEVEMENT SECTION */
+
+.achievementSection{
+
+    width:100%;
+    min-height:300px;
+
+    background-image:
+    linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)
+    ),
+    url('../assets/banner1.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+
+    padding:50px 0;
+}
+
+/* Achievement Box */
+
+.achievementBox{
+
+    color:white;
+}
+
+.achievementBox i{
+
+    font-size:50px;
+    color:#0d6efd;
+
+    margin-bottom:15px;
+}
+
+.achievementBox h2{
+
+    font-size:35px;
+    font-weight:800;
+}
+
+.achievementBox p{
+
+    font-size:16px;
+    letter-spacing:1px;
+}
+
+/* ------------------------------OFFERS------------------------------------ */
+
+.offerBread{
+    color:#0d6efd;
+    letter-spacing:3px;
+    font-weight:700;
+}
+
+.offerBox{
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0px 5px 20px rgba(0,0,0,0.1);
+    transition:0.5s;
+}
+
+.offerBox:hover{
+    transform:translateY(-5px);
+}
+
+.offerBox img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+}
+
+.offerContent{
+    padding:20px;
+}
+
+.offerContent h4{
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.offerContent p{
+    color:#666;
+}
+
+.osection{
+    padding:60px 0;
+    background:#f8f9fa;
+}
+
+.timeline{
+    position:relative;
+}
+
+/* Vertical Line */
+.centerLine{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:50%;
+    width:4px;
+    background:#0d6efd;
+    transform:translateX(-50%);
+}
+
+/* Card */
+.offerCard{
+    border:none;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.offerCard:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 25px rgba(0,0,0,.2);
+}
+
+
+
+/* Left Side */
+.justify-content-start .circle{
+    right:-30px;
+}
+
+/* Right Side */
+.justify-content-end .circle{
+    left:-30px;
+}
+
+
+/* -------------------------LOCATION CARDS--------------------------------- */
+
+.card{
+    border-radius:20px;
+    overflow:hidden;
+    background:#fff;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    padding: 10px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card-header{
+    background:linear-gradient(135deg,#0d6efd,#20c997);
+    color:#000000;
+    padding:20px;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.info-row{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:12px 0;
+    border-bottom:1px solid #eee;
+}
+
+.info-row i{
+    color:#0d6efd;
+    font-size:20px;
+}
