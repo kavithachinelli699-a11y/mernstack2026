@@ -2,6 +2,10 @@ import React from 'react'
 import innerStyles from './innerStyles.module.css'
 import healthcareImage from "../assets/healthcare.webp";
 import healthImage from "../assets/health.jpg";
+import heart from "../assets/heart.jpg";
+import dent from "../assets/dent.jpg";
+import body from "../assets/body.webp";
+import emer from "../assets/emer.webp";
 
 
 const Home = () => {
@@ -339,135 +343,121 @@ const Home = () => {
 
     <div className="carousel-inner">
 
-      {/* Slide 1 */}
+  {/* Slide 1 */}
+  <div className="carousel-item active">
 
-      <div className="carousel-item active">
+    <div className="row">
 
-        <div className="row">
+      {/* Offer 1 */}
+      <div className="col-md-6 mb-4">
+        <div className={innerStyles.offerBox}>
 
-          {/* Offer 1 */}
+          <img
+            src={heart}
+            alt="Heart Health Package"
+            className="img-fluid"
+          />
 
-          <div className="col-md-6 mb-4">
+          <div className={innerStyles.offerContent}>
 
-            <div className={innerStyles.offerBox}>
+            <h4>Heart Health Package</h4>
 
-              <img
-                src="src/assets/heart.jpg"
-                alt="offer1"
-                className="img-fluid"
-              />
-
-              <div className={innerStyles.offerContent}>
-
-                <h4>Heart Health Package</h4>
-
-                <p>
-                  Complete heart screening with
-                  specialist consultation.
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          {/* Offer 2 */}
-
-          <div className="col-md-6 mb-4">
-
-            <div className={innerStyles.offerBox}>
-
-              <img
-                src="src/assets/dent.jpg"
-                alt="offer2"
-                className="img-fluid"
-              />
-
-              <div className={innerStyles.offerContent}>
-
-                <h4>Dental Care Offer</h4>
-
-                <p>
-                  Free dental checkup and
-                  cleaning package.
-                </p>
-
-              </div>
-
-            </div>
+            <p>
+              Complete heart screening with
+              specialist consultation.
+            </p>
 
           </div>
 
         </div>
-
       </div>
 
-      {/* Slide 2 */}
+      {/* Offer 2 */}
+      <div className="col-md-6 mb-4">
+        <div className={innerStyles.offerBox}>
 
-      <div className="carousel-item">
+          <img
+            src={dent}
+            alt="Dental Care Offer"
+            className="img-fluid"
+          />
 
-        <div className="row">
+          <div className={innerStyles.offerContent}>
 
-          {/* Offer 3 */}
+            <h4>Dental Care Offer</h4>
 
-          <div className="col-md-6 mb-4">
-
-            <div className={innerStyles.offerBox}>
-
-              <img
-                src="src/assets/body.webp"
-                alt="offer3"
-                className="img-fluid"
-              />
-
-              <div className={innerStyles.offerContent}>
-
-                <h4>Full Body Checkup</h4>
-
-                <p>
-                  Advanced diagnostic tests with
-                  expert consultation.
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          {/* Offer 4 */}
-
-          <div className="col-md-6 mb-4">
-
-            <div className={innerStyles.offerBox}>
-
-              <img
-                src="src/assets/emer.webp"
-                alt="offer4"
-                className="img-fluid"
-              />
-
-              <div className={innerStyles.offerContent}>
-
-                <h4>Emergency Care Service</h4>
-
-                <p>
-                  24/7 emergency healthcare
-                  assistance available.
-                </p>
-
-              </div>
-
-            </div>
+            <p>
+              Free dental checkup and
+              cleaning package.
+            </p>
 
           </div>
 
         </div>
-
       </div>
 
     </div>
+  </div>
+
+
+  {/* Slide 2 */}
+  <div className="carousel-item">
+
+    <div className="row">
+
+      {/* Offer 3 */}
+      <div className="col-md-6 mb-4">
+        <div className={innerStyles.offerBox}>
+
+          <img
+            src={body}
+            alt="Full Body Checkup"
+            className="img-fluid"
+          />
+
+          <div className={innerStyles.offerContent}>
+
+            <h4>Full Body Checkup</h4>
+
+            <p>
+              Advanced diagnostic tests with
+              expert consultation.
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+
+
+      {/* Offer 4 */}
+      <div className="col-md-6 mb-4">
+        <div className={innerStyles.offerBox}>
+
+          <img
+            src={emer}
+            alt="Emergency Care Service"
+            className="img-fluid"
+          />
+
+          <div className={innerStyles.offerContent}>
+
+            <h4>Emergency Care Service</h4>
+
+            <p>
+              24/7 emergency healthcare
+              assistance available.
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
 
     {/* Previous Button */}
 
