@@ -11,7 +11,7 @@ const AddGallery = () => {
   e.preventDefault();
   formdata.append("image", image);
    formdata.append("catname", catname);
-    axios.post("https://mernstack-1-epy0.onrender.com/addgallery", formdata)
+    axios.post("https://mernstack-1-epy0.onrender.com/gallery", formdata)
     .then(res => {
       alert(res.data.message);
       setCatname("");
