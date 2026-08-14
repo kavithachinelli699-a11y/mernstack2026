@@ -14,7 +14,7 @@ const Bookappointments = () => {
 
   useEffect(()=>{
       async function getDropdownData(){
-        const res = await axios.get(`http://localhost:4000/treatment`)
+        const res = await axios.get(`https://mernstack-1-epy0.onrender.com/treatment`)
         console.log(res.data)
         setTreatment(res.data.treatmentdata);
       };
@@ -23,7 +23,7 @@ const Bookappointments = () => {
   
   useEffect(()=>{
       async function getDropdownData(){
-        const res = await axios.get(`http://localhost:4000/subtreatment`)
+        const res = await axios.get(`https://mernstack-1-epy0.onrender.com/subtreatment`)
         console.log(res.data)
         setSubtreatment(res.data.subtreatmentdata);
       };
@@ -32,7 +32,7 @@ const Bookappointments = () => {
 
       useEffect(()=>{
       async function getDropdownData(){
-        const res = await axios.get(`http://localhost:4000/doctor`)
+        const res = await axios.get(`https://mernstack-1-epy0.onrender.com/doctor`)
         console.log(res.data)
         setDoctor(res.data.ddata);
       };
@@ -64,7 +64,7 @@ const Bookappointments = () => {
 
 const submitHandler = (e) =>{
   e.preventDefault();
-  axios.post(`http://localhost:4000/bookappointments`,data)
+  axios.post(`https://mernstack-1-epy0.onrender.com/bookappointments`,data)
   .then(res=>{
     alert(res.data.message);
     setData({
