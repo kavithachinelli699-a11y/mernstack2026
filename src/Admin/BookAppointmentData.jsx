@@ -104,7 +104,7 @@ const BookAppointmentData = () => {
               </td>
 
               <td>
-                {item.treatmentName}
+                {item.catname}
               </td>
 
               <td>
