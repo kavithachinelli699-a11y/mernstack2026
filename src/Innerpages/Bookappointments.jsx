@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import innerStyles from "./innerStyles.module.css";
 import { useLocation, useParams } from 'react-router-dom'
 import axios from 'axios';
@@ -8,11 +8,42 @@ const Bookappointments = () => {
 
   const {catname,subtreatmentname, doctorname, doctorworkinghospital} = useParams();
 
+  const [treatment, setTreatment]= useState([])
+  const [subtreatment, setSubtreatment]= useState([])
+  const [doctor , setDoctor]= useState([])
+
+  useEffect(()=>{
+      async function getDropdownData(){
+        const res = await axios.get(`http://localhost:4000/treatment`)
+        console.log(res.data)
+        setTreatment(res.data.treatmentdata);
+      };
+      getDropdownData(); 
+    },[])
+  
+  useEffect(()=>{
+      async function getDropdownData(){
+        const res = await axios.get(`http://localhost:4000/subtreatment`)
+        console.log(res.data)
+        setSubtreatment(res.data.subtreatmentdata);
+      };
+      getDropdownData(); 
+    },[])
+
+      useEffect(()=>{
+      async function getDropdownData(){
+        const res = await axios.get(`http://localhost:4000/doctor`)
+        console.log(res.data)
+        setDoctor(res.data.ddata);
+      };
+      getDropdownData(); 
+    },[])
+
 
   const [data, setData] = useState({
     catname:catname || "",
-    subTreatmentName:subtreatmentname ||  "",
-    doctorName: doctorname|| "",
+    subtreatmentname:subtreatmentname ||  "",
+    doctorname: doctorname|| "",
     hospitalName:doctorworkinghospital || "",
     patientName:"",
     patientEmail:"",
@@ -33,13 +64,13 @@ const Bookappointments = () => {
 
 const submitHandler = (e) =>{
   e.preventDefault();
-  axios.post(`https://mernstack-1-epy0.onrender.com/bookappointments`,data)
+  axios.post(`http://localhost:4000/bookappointments`,data)
   .then(res=>{
     alert(res.data.message);
     setData({
     catname: "",
-    subTreatmentName:"",
-    doctorName: "",
+    subtreatmentname:"",
+    doctorname: "",
     hospitalName:"",
     patientName:"",
     patientEmail:"",
@@ -88,14 +119,16 @@ const submitHandler = (e) =>{
 
                       <label>Treatment</label>
 
-                      <input
-                        type='text'
-                        name='catname'
-                        value={data.catname}
-                        onChange={changeHandler}
-                        className='form-control'
-                      />
-
+                      <select name="catname" value={data.catname} onChange={changeHandler} className='form-control'>
+                          <option value="">Select Treatment</option>
+                          {
+                            treatment.map((e)=>(
+                              <option key={e._id} value={e.catname}>
+                                {e.catname}
+                              </option>
+                            ))
+                          }
+                        </select>
                     </div>
 
                     {/* SubTreatment */}
@@ -103,13 +136,16 @@ const submitHandler = (e) =>{
 
                       <label>Sub Treatment</label>
 
-                      <input
-                        type='text'
-                        name='subTreatmentName'
-                        value={data.subTreatmentName}
-                        onChange={changeHandler}
-                        className='form-control'
-                      />
+                      <select name="subtreatmentname" value={data.subtreatmentname} onChange={changeHandler} className='form-control'>
+                          <option value="">Select Treatment</option>
+                          {
+                            subtreatment.map((e)=>(
+                              <option key={e._id} value={e.subtreatmentname}>
+                                {e.subtreatmentname}
+                              </option>
+                            ))
+                          }
+                        </select>
 
                     </div>
 
@@ -118,13 +154,16 @@ const submitHandler = (e) =>{
 
                       <label>Doctor Name</label>
 
-                      <input
-                        type='text'
-                        name='doctorName'
-                        value={data.doctorName}
-                        onChange={changeHandler}
-                        className='form-control'
-                      />
+                      <select name="doctorname" value={data.doctorname} onChange={changeHandler} className='form-control'>
+                          <option value="">Select Treatment</option>
+                          {
+                            doctor.map((e)=>(
+                              <option key={e._id} value={e.doctorname}>
+                                {e.doctorname}
+                              </option>
+                            ))
+                          }
+                        </select>
 
                     </div>
 
